@@ -20,3 +20,9 @@
     Média final: 6
     O aluno foi reprovado.
     ```
+  
+## Passos
+* Configurar a IDE para usar o git bash
+* Abrir o terminal e instalar o Django: `pipenv install`
+* Entrar no diretório `notas` pelo terminal (`cd notas`) e digitar o comando `python manage.py startapp grades`
+* Verificar se está tudo ok digitando `python manage.py runserver`.
