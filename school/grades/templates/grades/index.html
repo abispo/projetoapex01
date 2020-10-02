@@ -1,0 +1,27 @@
+<h1>Cadastro de alunos e notas</h1>
+<hr>
+
+<form action="{% url 'grades:register' %}" method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="name">Nome do aluno: </label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div>
+        <label for="grade1">Primeira nota: </label>
+        <input type="text" name="grade1" id="grade1">
+    </div>
+
+    <div>
+        <label for="grade2">Segunda nota: </label>
+        <input type="text" name="grade2" id="grade2">
+    </div>
+
+    <div>
+        <label for="grade3">Terceira nota: </label>
+        <input type="text" name="grade3" id="grade3">
+    </div>
+
+    <div><input type="submit" value="Enviar"></div>
+</form>
