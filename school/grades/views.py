@@ -37,3 +37,21 @@ def reports(request):
         'grades/reports.html',
         {'students_list': students}
     )
+
+
+def student_detail(request, student_id):
+    student = Student.objects.get(pk=student_id)
+
+    return render(
+        request,
+        'grades/student_detail.html',
+        {'student': student}
+    )
+
+
+def student_delete(request):
+    student_id = request.POST.get('student_id')
+    student = Student.objects.get(pk=student_id)
+    student.delete()
+
+    return render(request, 'grades/student_deleted.html')

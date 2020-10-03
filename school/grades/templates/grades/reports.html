@@ -3,11 +3,7 @@
 
 {% for student in students_list %}
 <div>
-    <p>Aluno: <a href="">{{ student.name }}</a></p>
-    {% for grade in student.grade_set.all %}
-        <p>Nota {{ forloop.counter }}: {{ grade.value }}</p>
-    {% endfor %}
-    <p>Média final: {{ student.media }}</p>
+    <p>Aluno: <a href="{% url 'grades:student_detail' student.id %}">{{ student.name }}</a></p>
     <strong>{% if student.media > 7 %}{{ student.name}} foi aprovado. {% else %}{{ student.name }} foi reprovado.{% endif %}</strong>
 </div>
 <hr>
